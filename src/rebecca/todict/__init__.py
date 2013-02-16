@@ -21,7 +21,9 @@ def set_todict(config, type, callable, name=""):
 
 
 def todict(request, value, name=""):
-    adapted = request.registry.getMultiAdapter([request, value], IDict)
+    adapted = request.registry.getMultiAdapter([request, value], 
+                                               IDict,
+                                               name=name)
     return adapted
 
 
