@@ -12,7 +12,7 @@ def to_dict_dummy_another(request, obj):
 
 @pytest.fixture
 def config():
-    from . import includeme
+    from rebecca.todict import includeme
     config = testing.setUp()
 
     config.include(includeme)
@@ -23,7 +23,7 @@ def config():
 
 def test_it(config):
     from pyramid.interfaces import IRequest, IDict
-    from . import todict
+    from rebecca.todict import todict
 
 
     dummy = Dummy()
@@ -34,7 +34,7 @@ def test_it(config):
 
 def test_named_todict(config):
     from pyramid.interfaces import IRequest, IDict
-    from . import todict
+    from rebecca.todict import todict
 
 
     dummy = Dummy()
