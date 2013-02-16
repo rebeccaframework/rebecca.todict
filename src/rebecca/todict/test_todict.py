@@ -8,9 +8,12 @@ def to_dict_dummy(request, obj):
 
 def test_it():
     from pyramid.interfaces import IRequest, IDict
-    from . import set_todict, todict
+    from . import set_todict, todict, includeme
+
     config = testing.setUp()
-    set_todict(config, Dummy, to_dict_dummy)
+
+    config.include(includeme)
+    config.set_todict(Dummy, to_dict_dummy)
 
     dummy = Dummy()
     request = testing.DummyRequest()
