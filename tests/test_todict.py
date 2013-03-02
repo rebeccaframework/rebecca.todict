@@ -11,10 +11,12 @@ def to_dict_dummy_another(request, obj):
     return dict(value="another")
 
 @pytest.fixture
-def config():
+def config(request):
     from rebecca.todict import includeme
     config = testing.setUp()
-
+    def fin():
+        testing.tearDown()
+    request.addfinalizer(fin)
     config.include(includeme)
     config.set_todict(Dummy, to_dict_dummy)
     config.set_todict(Dummy, to_dict_dummy_another, name="another")
