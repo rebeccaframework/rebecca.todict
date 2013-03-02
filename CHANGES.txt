@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2
+0.2 (2013-03-02)
 --------------------
 
 - add json renderer using todict API
