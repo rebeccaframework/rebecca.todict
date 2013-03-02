@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1'
+version = '0.0'
 
 requires = [
     "pyramid",
@@ -37,11 +37,16 @@ setup(name='rebecca.todict',
         "Framework :: Pyramid",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.2",
+        "Programming Language :: Python :: 3.3",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='Atsushi Odagiri',
+      author_email='aodagx@gmail.com',
+      url='https://github.com/rebeccaframework/rebecca.todict',
       license='MIT',
       packages=find_packages('src'),
       package_dir = {'': 'src'},
