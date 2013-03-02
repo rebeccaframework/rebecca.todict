@@ -29,5 +29,5 @@ def test_it(config):
     context = testing.DummyResource()
     request = testing.DummyRequest()
     result = render_view(context, request, name="dummy_view")
-
-    assert result == b'{"dummy": {"value": "test"}, "extra": 100}'
+    import json
+    assert json.loads(result.decode('utf-8')) == json.loads('{"dummy": {"value": "test"}, "extra": 100}')
