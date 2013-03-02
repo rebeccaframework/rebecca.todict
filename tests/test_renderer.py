@@ -30,4 +30,4 @@ def test_it(config):
     request = testing.DummyRequest()
     result = render_view(context, request, name="dummy_view")
 
-    assert result == '{"dummy": {"value": "test"}, "extra": 100}'
+    assert result == b'{"dummy": {"value": "test"}, "extra": 100}'
