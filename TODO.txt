@@ -1,2 +1,4 @@
 future
 -----------------
+
+- add registering default adapter named "*"(wild card)
