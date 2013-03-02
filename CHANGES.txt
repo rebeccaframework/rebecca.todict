@@ -5,6 +5,8 @@ Changelog
 --------------------
 
 - add json renderer using todict API
+- todict_config decorator
+
 
 0.1 (2013-02-16)
 --------------------

@@ -1,4 +1,13 @@
+import venusian
 from pyramid.interfaces import IDict, IRequest
+
+def todict_config(context, name=""):
+    def dec(callable):
+        def callback(scanner, _name, ob):
+            scanner.config.set_todict(context, callable, name)
+        venusian.attach(callable, callback)
+        return callable
+    return dec
 
 def set_todict(config, type, callable, name=""):
     type = config.maybe_dotted(type)
