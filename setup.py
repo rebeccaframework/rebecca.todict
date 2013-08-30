@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.0'
+version = '0.4'
 
 requires = [
     "pyramid",
@@ -16,7 +16,7 @@ points = {
     }
 
 long_description = (
-    open('README.txt').read()
+    open('README.rst').read()
     + '\n' +
     'Contributors\n'
     '============\n'
