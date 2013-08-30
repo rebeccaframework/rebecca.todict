@@ -32,6 +32,7 @@ def test_app():
     config = Configurator()
     config.include('rebecca.todict')
     config.set_todict(Person, person_to_dict1)
+    config.set_todict(object, person_to_dict1)
     config.set_todict(Person, person_to_dict2, name="test2")
     config.set_root_factory(factory)
     config.add_view(view1, name="view1", renderer="json")

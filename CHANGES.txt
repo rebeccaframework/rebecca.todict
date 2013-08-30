@@ -4,7 +4,7 @@ Changelog
 0.4 (unreleased)
 --------------------------------
 
-- no idea
+- fix conflict multi todict registration for the same name and different type
 
 0.3 (2013-08-31)
 ---------------------
