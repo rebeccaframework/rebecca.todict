@@ -22,7 +22,7 @@ def test_it(config):
     dummy = Dummy()
     request = testing.DummyRequest()
     result = todict(request, dummy)
-    
+
     assert result == dict(value="test")
 
 def test_named_todict(config):

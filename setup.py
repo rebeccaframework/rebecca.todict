@@ -9,7 +9,7 @@ requires = [
 
 tests_require = [
     "pytest",
-    "mock",
+    "webtest",
     ]
 
 points = {

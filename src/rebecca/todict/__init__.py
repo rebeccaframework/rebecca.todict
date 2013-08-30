@@ -25,7 +25,7 @@ def set_todict(config, type, callable, name=""):
                                  title='todict of {0}'.format(type.__name__),
                                  type_name=None)
 
-    config.action("todict", register,
+    config.action("rebecca.todict:{0}".format(name), register,
                   introspectables=(intr,))
 
 

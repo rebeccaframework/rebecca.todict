@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3 (unreleased)
+---------------------
+
+- fix conflict multi todict registration
+
+
 0.2 (2013-03-02)
 --------------------
 
